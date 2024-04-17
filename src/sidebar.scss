@@ -1,0 +1,24 @@
+.sidebar_list_item {
+    padding: 0 !important;
+    margin:10px 0px ;
+    width: 100%;
+    .sidebar_list_item_link{
+        padding: 10px 20px;
+        width: 250px;
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        transition: all 0.2s ease-in;
+       
+    }.active{
+        background-color: white;
+        border-left: 4px solid blue;
+    }:hover{
+        background-color: white;
+        border-left: 4px solid blue;
+    }
+    
+    
+}

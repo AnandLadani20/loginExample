@@ -10,7 +10,7 @@ const Router = () => {
   const Redirect = <Navigate to='/login' /> 
   return (
     <Routes>
-        <Route exact path='/' element={isAuthenticated ? <Dashboard /> : Redirect} />
+        <Route exact path='/' element={ <Dashboard /> } />
         <Route exact path='/login' element={<Login setIsAuthenticated={setIsAuthenticated} />} />
         <Route exact path='/signup' element={<SignUp setIsAuthenticated={setIsAuthenticated}/>} />
     </Routes>
