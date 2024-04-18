@@ -1,0 +1,63 @@
+:root {
+    --star-color: rgba(0, 0, 0, 0.16);
+    --star-background: #6a6a6d;
+    --blue-bg: #0088cc;
+    --lightgray-text: #777777;
+    --dark-btn: #222529;
+    --gray-border: #e7e7e7;
+    --dark-heading: #222529;
+}
+
+.feature-tooltip {
+    font-size: 16px;
+    font-weight: 500;
+    top: -30px;
+    visibility: hidden;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 4px;
+    padding: 6px 0px;
+    width: 40px;
+    position: absolute;
+    z-index: 1;
+
+}
+
+.feature-tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+
+}
+
+.featured-stars:hover .feature-tooltip {
+    visibility: visible;
+}
+
+.featured-stars {
+    --percent: calc(var(--rating) / 5 * 100%);
+    text-align: center;
+    display: inline-block;
+    font-size: 19px;
+    font-weight: bold;
+    font-family: Times;
+    line-height: 1;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.featured-stars::before {
+    content: '★★★★★';
+    letter-spacing: 3px;
+    background: linear-gradient(90deg, var(--star-background) var(--percent), var(--star-color) var(--percent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
