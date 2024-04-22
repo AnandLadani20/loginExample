@@ -6,10 +6,16 @@ export const fetchProduct = createAsyncThunk('product/fetchAll', async () => {
     return response.data
 })
 
+export const fetchPaginationProduct = createAsyncThunk('product/fetchPagination', async ({limit:limit,skip:skip}) => {
+    const response = await axios.get(`/products?limit=${limit}&skip=${skip}`);
+    return response.data    
+});
+
 const productSlice = createSlice({
     name: 'allProduct',
     initialState: {
         product: null,
+        categProduct:null,
     },
     reducers: {
         allProducts: (state, action) => {
@@ -25,6 +31,11 @@ const productSlice = createSlice({
         })
         builder.addCase(fetchProduct.rejected, (state, action) => {
             state.product = action.payload;
+        })
+
+        
+        builder.addCase(fetchPaginationProduct.fulfilled, (state, action) => {
+            state.categProduct = action.payload;
         })
     }
 

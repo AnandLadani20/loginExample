@@ -3,6 +3,7 @@ import { Navigate, Route, Routes } from 'react-router-dom'
 import Dashboard from '../pages/Dashboard'
 import Login from '../pages/Login'
 import SignUp from '../pages/SignUp'
+import Categories from '../pages/Categories'
 
 const Router = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -11,6 +12,7 @@ const Router = () => {
   return (
     <Routes>
         <Route exact path='/' element={ <Dashboard /> } />
+        <Route exact path='/categories' element={ <Categories /> } />
         <Route exact path='/login' element={<Login setIsAuthenticated={setIsAuthenticated} />} />
         <Route exact path='/signup' element={<SignUp setIsAuthenticated={setIsAuthenticated}/>} />
     </Routes>

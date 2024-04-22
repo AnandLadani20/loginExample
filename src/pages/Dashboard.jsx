@@ -11,22 +11,22 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
+import { Link } from "react-router-dom";
 
 const Dashboard = () => {
-  // const [products, setProduct] = useState(null);
   const products = useSelector((state) => state.products.product);
   console.log(products);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchProduct());
   }, []);
-  useEffect(() => {
-    dispatch(fetchProduct());
-  }, []);
+
 
   return (
     <Box>
-      <Box></Box>
+      <Box>
+        <Link to={'/categories'} >Categories</Link>
+      </Box>
       <Box>
         {
           products?.products.map((p) => {
