@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+  </head>
+
+  <body>
+    <main id="app">
+      <section class="editor">
+        <section class="editor-preview">
+          <canvas id="player" />
+        </section>
+        <a class="download">download recording</a>
+        <ul class="editor-controls">
+          <li>
+            <button class="play" title="play"></button>
+          </li>
+          <li>
+            <button class="multiplier-0-5x" title="speed multiplier 0.5x"></button>
+          </li>
+          <li>
+            <button class="multiplier-1x" title="speed multiplier 1x"></button>
+          </li>
+          <li>
+            <button class="multiplier-2x" title="speed multiplier 2x"></button>
+          </li>
+          <li>
+            <button class="record" title="record"></button>
+          </li>
+        </ul>
+        <section class="editor-timeline">
+          <button class="playlist-add" title="Add new layer">
+          </button>
+          <section class="modal">
+            <form action="" class="modal-content">
+              <button class="modal-close close"></button>
+              <input type="file" class="modal-file" accept=".mp4, .jpeg, .jpg, .webm, .png">
+              <div class="modal-preview"></div>
+              <button class="modal-load">
+                Upload
+                <span class="arrow-right"></span>
+              </button>
+            </form>
+          </section>
+        </section>
+      </section>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
