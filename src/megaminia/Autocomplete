@@ -1,0 +1,84 @@
+// import React, { useRef, useState } from 'react';
+// import { useTranslation } from 'react-i18next';
+// import { Box, Typography } from '@mui/material';
+// import AutoCompleteField from '../../../components/autoCompleteField';
+// import { parentNameFaction } from '../../../../utils/constants';
+// import { parentFactionPart, subHeadingTitle, setFactionChipBox } from '../../../../styles/components/newGameDialog';
+
+// const AddGamesModalContent: React.FC = () => {
+//   const { t } = useTranslation();
+//   const [factionTags, setFactionTags] = useState<string[]>([]);
+
+//   const handleTagAddition = (newTag: string) => {
+//     console.log('New tag added:', newTag); // Log the newly added tag
+//     setFactionTags([...factionTags, newTag]); // Update the state with the new tag
+//   };
+
+//   return (
+//     <Box>
+//       <Box sx={parentFactionPart}>
+//         <Typography sx={subHeadingTitle} variant='h5'>{t('dashboardGamePage.createGameDialog.createFactionText')}</Typography>
+//         <AutoCompleteField
+//           initialTags={factionTags}
+//           options={parentNameFaction}
+//           onTagsChange={setFactionTags}
+//           label={t('dashboardGamePage.createGameDialog.insertParentText')}
+//           chipsBoxSx={setFactionChipBox}
+//           onTagAdded={handleTagAddition} // Pass the callback function to handle tag addition
+//         />
+//       </Box>
+//     </Box>
+//   );
+// };
+
+// export default AddGamesModalContent;
+
+
+
+// import React, { useRef, useState } from 'react';
+// import { useTranslation } from 'react-i18next';
+// import { Box, Typography, useTheme } from '@mui/material';
+// import AutoCompleteField from '../../../components/autoCompleteField';
+// import { parentFactionPart, subHeadingTitle, setFactionChipBox } from '../../../../styles/components/newGameDialog';
+
+// interface MediaFile {
+//   fileName: string;
+//   dataURL: string;
+// }
+
+// const AddGamesModalContent: React.FC = () => {
+//   const { t } = useTranslation();
+//   const theme = useTheme();
+
+//   const [selectedValue, setSelectedValue] = useState<string>('');
+//   const fileInputRef = useRef<HTMLInputElement | null>(null);
+//   const [mediaFileAttached, setMediaFileAttached] = useState<MediaFile | null>(null);
+//   const brandFileInputRef = useRef<HTMLInputElement | null>(null);
+//   const [mediaBrandFileAttached, setMediaBrandFileAttached] = useState<MediaFile | null>(null);
+//   const [factionTags, setFactionTags] = useState<string[]>([]);
+
+//   // This function will be called whenever the tags change
+//   const handleTagsChange = (newTags: string[]) => {
+//     console.log('Tags:', newTags); // Log the new tags array to the console
+//     setFactionTags(newTags); // Update the state with the new tags
+//   };
+
+//   return (
+//     <Box>
+//       <Box sx={parentFactionPart}>
+//         <Typography sx={subHeadingTitle} variant="h5">
+//           {t('dashboardGamePage.createGameDialog.createFactionText')}
+//         </Typography>
+//         <AutoCompleteField
+//           initialTags={factionTags}
+//           options={[]} // Adjust this if you have specific options
+//           onTagsChange={handleTagsChange}
+//           label={t('dashboardGamePage.createGameDialog.insertParentText')}
+//           chipsBoxSx={setFactionChipBox}
+//         />
+//       </Box>
+//     </Box>
+//   );
+// };
+
+// export default AddGamesModalContent;
